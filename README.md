@@ -1,1 +1,1 @@
-# Sam's machine learning project
+# Python machine learnig project and more 
