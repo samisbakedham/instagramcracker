@@ -1,1 +1,1 @@
-# Python machine learnig project and more 
+# Python machine learning project and more 
