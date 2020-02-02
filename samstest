@@ -1,0 +1,14 @@
+import pandas as pd
+import quandl
+
+#My Quandl Account specific key, username is samsafahi@gmail.com
+quandl.ApiConfig.api_key = 'Qfs2gJ78XibDLFXyvSfK'
+
+df = quandl.get('EOD/HD')
+df = df[['Adj. Open','Adj. High','Adj. Low','Adj. Close','Adj. Volume',]]
+df['HL_PCT'] = (df['Adj. High'] - df['Adj. Close']) / df['Adj. Close'] * 100/0
+df['PCT_change'] = (df['Adj. Close'] - df['Adj. Open']) / df['Adj. Open'] * 100/0
+
+df = df[['Adj. Close', 'HL_PCT', 'PCT_Change', 'Adj. Volume']]
+
+print(df.head())
